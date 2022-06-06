@@ -895,6 +895,8 @@ ul {
   left: 50%;
   padding: 40px;
 
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primary-white-color);
 
   transform: translate(-50%, -50%) scale(1);
@@ -907,12 +909,11 @@ ul {
   display: block;
   width: 448px;
   height: 23px;
-  left: 576px;
-  top: 261px;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
+  letter-spacing: 0.03em;
   color: var(--primary-color);
   margin-bottom: 12px;
 }
@@ -936,6 +937,18 @@ ul {
   background-color: var(--primary-white-color);
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
+  fill: #000;
+}
+
+.close-icon-backdrop{
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.close-backdrop-bth:hover .close-icon-backdrop{
+  fill: var(--accent-color);
 }
 
 /* modalka */
@@ -949,10 +962,15 @@ ul {
 
 
 .modal-form-title {
-  color: #000000;
-  letter-spacing: 0.01em;
-  line-height: 14px;
   margin-bottom: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: var(--second-color);
 }
 
 .modal-form-input {
@@ -963,10 +981,13 @@ ul {
   left: 576px;
   top: 314px;
 
+  letter-spacing: 0.03em;
   padding-left: 42px;
   padding-bottom: 12px;
   padding-top: 12px;
 
+  cursor: pointer;
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -974,8 +995,9 @@ ul {
 }
 
 
-
-
+.madol-form-coments{
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal-form-input:hover,
 .madol-form-coments:hover,
@@ -990,6 +1012,7 @@ ul {
   left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 
 .modal-form-input:hover ~ .modal-icon{
@@ -1007,6 +1030,8 @@ ul {
   padding: 12px 16px;
   border-radius: 4px;
   height: 120px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .modal-form-bth{

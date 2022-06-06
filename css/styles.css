@@ -1101,13 +1101,8 @@ ul {
   outline-color: transparent;
 }
 
-.checkbox:focus~.icon-checkbox{
-  border-color: var(--accent-color);
+.checkbox:focus~.agreem-txt>.icon-checkbox {
+  outline-color: #2196f3;
 }
-
-/* .modal-checkbox:focus-within {
-  border-color: var(--accent-color);
-  border-width: 1px;
-} */
 
 /* end modal */
